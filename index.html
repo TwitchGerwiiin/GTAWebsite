@@ -9,6 +9,16 @@
   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
   <title>German Twitch Army</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script type="text/javascript">var submitted=false;</script>
+  <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(2000);
+      $('#gform').prepend('Your submission has been processed...');
+    });
+
+  </script>
 </head>
 
 <body>
@@ -51,22 +61,33 @@
             <li>Geistige Reife</li>
           </ul>
 
-          <h3>
-            <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Kontakt</h3>
+        </p>
 
-            <p>Kommt</p>
-          </section>
-        </div>
+        <p>Zum Bewerben einfach folgendes Formular ausfüllen und abschicken:
 
-        <!-- FOOTER  -->
-        <div id="footer_wrap" class="outer">
-          <footer class="inner">
-            <p class="copyright">Gtawebsite maintained by <a href="https://github.com/TwitchGerwiiin">TwitchGerwiiin</a></p>
-            <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-          </footer>
-        </div>
+          <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/u/0/d/1r1Sjy7zldpPJih-ScaF0xZmmEpXcHfhiWorfwDtt_Po/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
+            Name:<br>
+            <input type="text" name="entry.602384763" id="entry.602384763" value=""><br>
+            UPlay-Name:<br>
+            <input type="text" name="entry.1818867098" id="entry.1818867098" value=""><br>
+            Kommentar:<br>
+            <input type="text" name="entry.1612063400" id="entry.1612063400" value="" size="100"><br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+          </form>
 
-        
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-      </body>
-      </html>
+        </p>
+        </section>
+      </div>
+
+      <!-- FOOTER  -->
+      <div id="footer_wrap" class="outer">
+        <footer class="inner">
+          <p class="copyright">Gtawebsite maintained by <a href="https://github.com/TwitchGerwiiin">TwitchGerwiiin</a></p>
+          <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        </footer>
+      </div>
+    </body>
+    </html>
